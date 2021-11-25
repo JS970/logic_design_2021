@@ -1,0 +1,612 @@
+Analysis & Synthesis report for descrypto
+Thu Nov 25 22:54:53 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Thu Nov 25 22:54:53 2021       ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; descrypto                                   ;
+; Top-level Entity Name       ; main                                        ;
+; Family                      ; MAX V                                       ;
+; Total logic elements        ; 148                                         ;
+; Total pins                  ; 36                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                            ; main               ; descrypto          ;
+; Family name                                                      ; MAX V              ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                   ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                         ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------+---------+
+; f_module.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/f_module.bdf        ;         ;
+; s_box_8.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/s_box_8.bdf         ;         ;
+; PC_2.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/PC_2.bdf            ;         ;
+; PC_1.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/PC_1.bdf            ;         ;
+; P.bdf                            ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/P.bdf               ;         ;
+; trigger.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/trigger.bdf         ;         ;
+; b2seg_bus.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/b2seg_bus.bdf       ;         ;
+; mx_4bit_2x1.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/mx_4bit_2x1.bdf     ;         ;
+; mux2x1.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/mux2x1.bdf          ;         ;
+; fbitreg.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/fbitreg.bdf         ;         ;
+; keypad.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/keypad.bdf          ;         ;
+; counter8.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/counter8.bdf        ;         ;
+; mode_selector.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/mode_selector.bdf   ;         ;
+; main.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/main.bdf            ;         ;
+; Expension.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/Expension.bdf       ;         ;
+; IP.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/IP.bdf              ;         ;
+; desencrypt.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/desencrypt.bdf      ;         ;
+; IP_inv.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/IP_inv.bdf          ;         ;
+; six_bit_decoder.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/six_bit_decoder.bdf ;         ;
+; rom_0001.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/rom_0001.bdf        ;         ;
+; rom_0010.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/rom_0010.bdf        ;         ;
+; rom_0011.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/rom_0011.bdf        ;         ;
+; rom_0100.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/rom_0100.bdf        ;         ;
+; rom_0101.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/rom_0101.bdf        ;         ;
+; rom_0110.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/rom_0110.bdf        ;         ;
+; rom_0111.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/rom_0111.bdf        ;         ;
+; rom_1000.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/rom_1000.bdf        ;         ;
+; rom_1001.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/rom_1001.bdf        ;         ;
+; rom_1010.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/rom_1010.bdf        ;         ;
+; rom_1011.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/rom_1011.bdf        ;         ;
+; rom_1100.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/rom_1100.bdf        ;         ;
+; rom_1101.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/rom_1101.bdf        ;         ;
+; rom_1110.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/rom_1110.bdf        ;         ;
+; rom_1111.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/rom_1111.bdf        ;         ;
+; rom_0000.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/rom_0000.bdf        ;         ;
+; s_box_1.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/s_box_1.bdf         ;         ;
+; or4bit.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/or4bit.bdf          ;         ;
+; s_box_2.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/s_box_2.bdf         ;         ;
+; s_box_3.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/s_box_3.bdf         ;         ;
+; s_box_4.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/s_box_4.bdf         ;         ;
+; s_box_5.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/s_box_5.bdf         ;         ;
+; s_box_6.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/s_box_6.bdf         ;         ;
+; s_box_7.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/s_box_7.bdf         ;         ;
+; ks_lelft_shift.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/ks_lelft_shift.bdf  ;         ;
+; lshift1.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/lshift1.bdf         ;         ;
+; lshift2.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/lshift2.bdf         ;         ;
+; key_generator.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/key_generator.bdf   ;         ;
+; round1_key.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/round1_key.bdf      ;         ;
+; round_key.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/round_key.bdf       ;         ;
+; round.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/round.bdf           ;         ;
+; mux16bit.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/DEScrypto/mux16bit.bdf        ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 148   ;
+;     -- Combinational with no register       ; 72    ;
+;     -- Register only                        ; 70    ;
+;     -- Combinational with a register        ; 6     ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 57    ;
+;     -- 3 input functions                    ; 13    ;
+;     -- 2 input functions                    ; 7     ;
+;     -- 1 input functions                    ; 1     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 148   ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 76    ;
+;                                             ;       ;
+; Total registers                             ; 76    ;
+; I/O pins                                    ; 36    ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 76    ;
+; Total fan-out                               ; 594   ;
+; Average fan-out                             ; 3.23  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                        ; Entity Name   ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------+---------------+--------------+
+; |main                      ; 148 (15)    ; 76           ; 0          ; 36   ; 0            ; 72 (15)      ; 70 (0)            ; 6 (0)            ; 0 (0)           ; 0 (0)      ; |main                                      ; main          ; work         ;
+;    |b2seg_bus:inst31|      ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|b2seg_bus:inst31                     ; b2seg_bus     ; work         ;
+;    |counter8:inst35|       ; 3 (3)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |main|counter8:inst35                      ; counter8      ; work         ;
+;    |fbitreg:inst10|        ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|fbitreg:inst10                       ; fbitreg       ; work         ;
+;    |fbitreg:inst11|        ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|fbitreg:inst11                       ; fbitreg       ; work         ;
+;    |fbitreg:inst12|        ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|fbitreg:inst12                       ; fbitreg       ; work         ;
+;    |fbitreg:inst13|        ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|fbitreg:inst13                       ; fbitreg       ; work         ;
+;    |fbitreg:inst14|        ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|fbitreg:inst14                       ; fbitreg       ; work         ;
+;    |fbitreg:inst15|        ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|fbitreg:inst15                       ; fbitreg       ; work         ;
+;    |fbitreg:inst16|        ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|fbitreg:inst16                       ; fbitreg       ; work         ;
+;    |fbitreg:inst2|         ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|fbitreg:inst2                        ; fbitreg       ; work         ;
+;    |fbitreg:inst3|         ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|fbitreg:inst3                        ; fbitreg       ; work         ;
+;    |fbitreg:inst4|         ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|fbitreg:inst4                        ; fbitreg       ; work         ;
+;    |fbitreg:inst5|         ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|fbitreg:inst5                        ; fbitreg       ; work         ;
+;    |fbitreg:inst6|         ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|fbitreg:inst6                        ; fbitreg       ; work         ;
+;    |fbitreg:inst7|         ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|fbitreg:inst7                        ; fbitreg       ; work         ;
+;    |fbitreg:inst8|         ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|fbitreg:inst8                        ; fbitreg       ; work         ;
+;    |fbitreg:inst9|         ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|fbitreg:inst9                        ; fbitreg       ; work         ;
+;    |fbitreg:insts|         ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|fbitreg:insts                        ; fbitreg       ; work         ;
+;    |keypad:inst|           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|keypad:inst                          ; keypad        ; work         ;
+;    |mode_selector:inst33|  ; 9 (5)       ; 7            ; 0          ; 0    ; 0            ; 2 (2)        ; 4 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |main|mode_selector:inst33                 ; mode_selector ; work         ;
+;       |fbitreg:instreg|    ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|mode_selector:inst33|fbitreg:instreg ; fbitreg       ; work         ;
+;    |mx_4bit_2x1:inst29|    ; 40 (40)     ; 0            ; 0          ; 0    ; 0            ; 40 (40)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|mx_4bit_2x1:inst29                   ; mx_4bit_2x1   ; work         ;
+;    |trigger:inst32|        ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|trigger:inst32                       ; trigger       ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 76    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 76    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 68    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |main|mx_4bit_2x1:inst29|inst10 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Nov 25 22:54:44 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off descrypto -c descrypto
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file f_module.bdf
+    Info (12023): Found entity 1: f_module
+Info (12021): Found 1 design units, including 1 entities, in source file s_box_8.bdf
+    Info (12023): Found entity 1: s_box_8
+Info (12021): Found 1 design units, including 1 entities, in source file pc_2.bdf
+    Info (12023): Found entity 1: PC_2
+Info (12021): Found 1 design units, including 1 entities, in source file pc_1.bdf
+    Info (12023): Found entity 1: PC_1
+Info (12021): Found 1 design units, including 1 entities, in source file p.bdf
+    Info (12023): Found entity 1: P
+Info (12021): Found 1 design units, including 1 entities, in source file trigger.bdf
+    Info (12023): Found entity 1: trigger
+Info (12021): Found 1 design units, including 1 entities, in source file b2seg_bus.bdf
+    Info (12023): Found entity 1: b2seg_bus
+Info (12021): Found 1 design units, including 1 entities, in source file mx_4bit_2x1.bdf
+    Info (12023): Found entity 1: mx_4bit_2x1
+Info (12021): Found 1 design units, including 1 entities, in source file mux2x1.bdf
+    Info (12023): Found entity 1: mux2x1
+Info (12021): Found 1 design units, including 1 entities, in source file fbitreg.bdf
+    Info (12023): Found entity 1: fbitreg
+Info (12021): Found 1 design units, including 1 entities, in source file keypad.bdf
+    Info (12023): Found entity 1: keypad
+Info (12021): Found 1 design units, including 1 entities, in source file counter8.bdf
+    Info (12023): Found entity 1: counter8
+Info (12021): Found 1 design units, including 1 entities, in source file mode_selector.bdf
+    Info (12023): Found entity 1: mode_selector
+Info (12021): Found 1 design units, including 1 entities, in source file main.bdf
+    Info (12023): Found entity 1: main
+Info (12021): Found 1 design units, including 1 entities, in source file expension.bdf
+    Info (12023): Found entity 1: Expension
+Info (12021): Found 1 design units, including 1 entities, in source file ip.bdf
+    Info (12023): Found entity 1: IP
+Info (12021): Found 1 design units, including 1 entities, in source file desencrypt.bdf
+    Info (12023): Found entity 1: desencrypt
+Info (12021): Found 1 design units, including 1 entities, in source file ip_inv.bdf
+    Info (12023): Found entity 1: IP_inv
+Info (12021): Found 1 design units, including 1 entities, in source file six_bit_decoder.bdf
+    Info (12023): Found entity 1: six_bit_decoder
+Info (12021): Found 1 design units, including 1 entities, in source file rom_0001.bdf
+    Info (12023): Found entity 1: rom_0001
+Info (12021): Found 1 design units, including 1 entities, in source file rom_0010.bdf
+    Info (12023): Found entity 1: rom_0010
+Info (12021): Found 1 design units, including 1 entities, in source file rom_0011.bdf
+    Info (12023): Found entity 1: rom_0011
+Info (12021): Found 1 design units, including 1 entities, in source file rom_0100.bdf
+    Info (12023): Found entity 1: rom_0100
+Info (12021): Found 1 design units, including 1 entities, in source file rom_0101.bdf
+    Info (12023): Found entity 1: rom_0101
+Info (12021): Found 1 design units, including 1 entities, in source file rom_0110.bdf
+    Info (12023): Found entity 1: rom_0110
+Info (12021): Found 1 design units, including 1 entities, in source file rom_0111.bdf
+    Info (12023): Found entity 1: rom_0111
+Info (12021): Found 1 design units, including 1 entities, in source file rom_1000.bdf
+    Info (12023): Found entity 1: rom_1000
+Info (12021): Found 1 design units, including 1 entities, in source file rom_1001.bdf
+    Info (12023): Found entity 1: rom_1001
+Info (12021): Found 1 design units, including 1 entities, in source file rom_1010.bdf
+    Info (12023): Found entity 1: rom_1010
+Info (12021): Found 1 design units, including 1 entities, in source file rom_1011.bdf
+    Info (12023): Found entity 1: rom_1011
+Info (12021): Found 1 design units, including 1 entities, in source file rom_1100.bdf
+    Info (12023): Found entity 1: rom_1100
+Info (12021): Found 1 design units, including 1 entities, in source file rom_1101.bdf
+    Info (12023): Found entity 1: rom_1101
+Info (12021): Found 1 design units, including 1 entities, in source file rom_1110.bdf
+    Info (12023): Found entity 1: rom_1110
+Info (12021): Found 1 design units, including 1 entities, in source file rom_1111.bdf
+    Info (12023): Found entity 1: rom_1111
+Info (12021): Found 1 design units, including 1 entities, in source file rom_0000.bdf
+    Info (12023): Found entity 1: rom_0000
+Info (12021): Found 1 design units, including 1 entities, in source file s_box_1.bdf
+    Info (12023): Found entity 1: s_box_1
+Info (12021): Found 1 design units, including 1 entities, in source file or4bit.bdf
+    Info (12023): Found entity 1: or4bit
+Info (12021): Found 1 design units, including 1 entities, in source file s_box_2.bdf
+    Info (12023): Found entity 1: s_box_2
+Info (12021): Found 1 design units, including 1 entities, in source file s_box_3.bdf
+    Info (12023): Found entity 1: s_box_3
+Info (12021): Found 1 design units, including 1 entities, in source file s_box_4.bdf
+    Info (12023): Found entity 1: s_box_4
+Info (12021): Found 1 design units, including 1 entities, in source file s_box_5.bdf
+    Info (12023): Found entity 1: s_box_5
+Info (12021): Found 1 design units, including 1 entities, in source file s_box_6.bdf
+    Info (12023): Found entity 1: s_box_6
+Info (12021): Found 1 design units, including 1 entities, in source file s_box_7.bdf
+    Info (12023): Found entity 1: s_box_7
+Info (12021): Found 1 design units, including 1 entities, in source file ks_lelft_shift.bdf
+    Info (12023): Found entity 1: ks_lelft_shift
+Info (12021): Found 1 design units, including 1 entities, in source file lshift1.bdf
+    Info (12023): Found entity 1: lshift1
+Info (12021): Found 1 design units, including 1 entities, in source file lshift2.bdf
+    Info (12023): Found entity 1: lshift2
+Info (12021): Found 1 design units, including 1 entities, in source file key_generator.bdf
+    Info (12023): Found entity 1: key_generator
+Info (12021): Found 1 design units, including 1 entities, in source file round1_key.bdf
+    Info (12023): Found entity 1: round1_key
+Info (12021): Found 1 design units, including 1 entities, in source file round_key.bdf
+    Info (12023): Found entity 1: round_key
+Info (12021): Found 1 design units, including 1 entities, in source file f_bac.bdf
+    Info (12023): Found entity 1: f_bac
+Info (12021): Found 1 design units, including 1 entities, in source file round.bdf
+    Info (12023): Found entity 1: round
+Info (12021): Found 1 design units, including 1 entities, in source file mux16bit.bdf
+    Info (12023): Found entity 1: mux16bit
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Warning (275083): Bus "reg10[3..0]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg11[3..0]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg12[3..0]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg13[3..0]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275080): Converted elements in bus name "reg1" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "reg1[3..0]" to "reg13..0"
+Warning (275080): Converted elements in bus name "reg10" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "reg10[3..0]" to "reg103..0"
+Warning (275080): Converted elements in bus name "reg11" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "reg11[3..0]" to "reg113..0"
+Warning (275080): Converted elements in bus name "reg12" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "reg12[3..0]" to "reg123..0"
+Warning (275080): Converted elements in bus name "reg13" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "reg13[3..0]" to "reg133..0"
+Warning (275085): Found inconsistent dimensions for element "d"
+Warning (275080): Converted elements in bus name "d" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "d[3]" to "d3"
+    Warning (275081): Converted element name(s) from "d[2]" to "d2"
+    Warning (275081): Converted element name(s) from "d[1]" to "d1"
+    Warning (275081): Converted element name(s) from "d[0]" to "d0"
+    Warning (275081): Converted element name(s) from "d[3..0]" to "d3..0"
+Warning (275013): Port "clk" of type desencrypt and instance "inst55" is missing source signal
+Info (12128): Elaborating entity "b2seg_bus" for hierarchy "b2seg_bus:inst31"
+Warning (275011): Block or symbol "AND4" of instance "inst51" overlaps another block or symbol
+Info (12128): Elaborating entity "mx_4bit_2x1" for hierarchy "mx_4bit_2x1:inst29"
+Warning (275011): Block or symbol "AND2" of instance "inst5" overlaps another block or symbol
+Info (12128): Elaborating entity "counter8" for hierarchy "counter8:inst35"
+Info (12128): Elaborating entity "fbitreg" for hierarchy "fbitreg:insts"
+Info (12128): Elaborating entity "mux2x1" for hierarchy "fbitreg:insts|mux2x1:inst12"
+Info (12128): Elaborating entity "mode_selector" for hierarchy "mode_selector:inst33"
+Info (12128): Elaborating entity "keypad" for hierarchy "keypad:inst"
+Info (12128): Elaborating entity "trigger" for hierarchy "trigger:inst32"
+Info (12128): Elaborating entity "desencrypt" for hierarchy "desencrypt:inst55"
+Warning (275083): Bus "reg10[3..0]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg11[3..0]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg12[3..0]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg13[3..0]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg10[0]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg10[1]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg10[2]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg10[3]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg11[0]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg11[1]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg11[2]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg11[3]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg12[0]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg12[1]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg12[2]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg12[3]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg13[0]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg13[1]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg13[2]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg13[3]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg10[3..0]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg11[3..0]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg12[3..0]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275083): Bus "reg13[3..0]" found using same base name as "reg1", which might lead to a name conflict.
+Warning (275080): Converted elements in bus name "reg1" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "reg1[3..0]" to "reg13..0"
+Warning (275080): Converted elements in bus name "reg10" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "reg10[3..0]" to "reg103..0"
+Warning (275080): Converted elements in bus name "reg11" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "reg11[3..0]" to "reg113..0"
+Warning (275080): Converted elements in bus name "reg12" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "reg12[3..0]" to "reg123..0"
+Warning (275080): Converted elements in bus name "reg13" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "reg13[3..0]" to "reg133..0"
+Info (12128): Elaborating entity "IP_inv" for hierarchy "desencrypt:inst55|IP_inv:inst43"
+Info (12128): Elaborating entity "round" for hierarchy "desencrypt:inst55|round:inst55"
+Info (12128): Elaborating entity "f_module" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35"
+Warning (275009): Pin "Kin32" not connected
+Warning (275009): Pin "Kin33" not connected
+Warning (275009): Pin "Kin34" not connected
+Warning (275009): Pin "Kin35" not connected
+Warning (275009): Pin "Kin36" not connected
+Warning (275008): Primitive "XOR" of instance "inst33" not used
+Warning (275008): Primitive "XOR" of instance "inst34" not used
+Warning (275008): Primitive "XOR" of instance "inst35" not used
+Warning (275008): Primitive "XOR" of instance "inst36" not used
+Warning (275008): Primitive "XOR" of instance "inst37" not used
+Info (12128): Elaborating entity "P" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|P:inst1"
+Info (12128): Elaborating entity "s_box_1" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_1:inst50"
+Info (12128): Elaborating entity "or4bit" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_1:inst50|or4bit:inst32"
+Info (12128): Elaborating entity "rom_0000" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_1:inst50|rom_0000:inst17"
+Info (12128): Elaborating entity "six_bit_decoder" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_1:inst50|six_bit_decoder:inst"
+Info (12128): Elaborating entity "mux16bit" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_1:inst50|six_bit_decoder:inst|mux16bit:inst"
+Info (12128): Elaborating entity "rom_0001" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_1:inst50|rom_0001:inst16"
+Info (12128): Elaborating entity "rom_0010" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_1:inst50|rom_0010:inst15"
+Info (12128): Elaborating entity "rom_0011" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_1:inst50|rom_0011:inst14"
+Info (12128): Elaborating entity "rom_0100" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_1:inst50|rom_0100:inst13"
+Info (12128): Elaborating entity "rom_0101" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_1:inst50|rom_0101:inst12"
+Info (12128): Elaborating entity "rom_0110" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_1:inst50|rom_0110:inst11"
+Info (12128): Elaborating entity "rom_0111" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_1:inst50|rom_0111:inst10"
+Info (12128): Elaborating entity "rom_1000" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_1:inst50|rom_1000:inst9"
+Info (12128): Elaborating entity "rom_1001" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_1:inst50|rom_1001:inst8"
+Info (12128): Elaborating entity "rom_1010" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_1:inst50|rom_1010:inst7"
+Info (12128): Elaborating entity "rom_1011" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_1:inst50|rom_1011:inst6"
+Info (12128): Elaborating entity "rom_1100" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_1:inst50|rom_1100:inst5"
+Info (12128): Elaborating entity "rom_1101" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_1:inst50|rom_1101:inst4"
+Info (12128): Elaborating entity "rom_1110" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_1:inst50|rom_1110:inst3"
+Info (12128): Elaborating entity "rom_1111" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_1:inst50|rom_1111:inst2"
+Info (12128): Elaborating entity "Expension" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|Expension:inst"
+Info (12128): Elaborating entity "s_box_2" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_2:inst56"
+Info (12128): Elaborating entity "s_box_3" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_3:inst52"
+Info (12128): Elaborating entity "s_box_4" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_4:inst53"
+Info (12128): Elaborating entity "s_box_5" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_5:inst31"
+Info (12128): Elaborating entity "s_box_6" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_6:inst54"
+Info (12128): Elaborating entity "s_box_7" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_7:inst51"
+Info (12128): Elaborating entity "s_box_8" for hierarchy "desencrypt:inst55|round:inst55|f_module:inst35|s_box_8:inst55"
+Info (12128): Elaborating entity "IP" for hierarchy "desencrypt:inst55|IP:inst3"
+Info (12128): Elaborating entity "key_generator" for hierarchy "desencrypt:inst55|key_generator:inst1"
+Info (12128): Elaborating entity "round_key" for hierarchy "desencrypt:inst55|key_generator:inst1|round_key:inst9"
+Info (12128): Elaborating entity "ks_lelft_shift" for hierarchy "desencrypt:inst55|key_generator:inst1|round_key:inst9|ks_lelft_shift:inst2"
+Info (12128): Elaborating entity "lshift1" for hierarchy "desencrypt:inst55|key_generator:inst1|round_key:inst9|ks_lelft_shift:inst2|lshift1:inst17"
+Info (12128): Elaborating entity "lshift2" for hierarchy "desencrypt:inst55|key_generator:inst1|round_key:inst9|ks_lelft_shift:inst2|lshift2:inst18"
+Info (12128): Elaborating entity "PC_2" for hierarchy "desencrypt:inst55|key_generator:inst1|round_key:inst9|PC_2:inst4"
+Warning (275009): Pin "pin9" not connected
+Warning (275009): Pin "pin18" not connected
+Warning (275009): Pin "pin22" not connected
+Warning (275009): Pin "pin25" not connected
+Warning (275009): Pin "pin35" not connected
+Warning (275009): Pin "pin38" not connected
+Warning (275009): Pin "pin43" not connected
+Warning (275009): Pin "pin54" not connected
+Info (12128): Elaborating entity "round1_key" for hierarchy "desencrypt:inst55|key_generator:inst1|round1_key:inst1"
+Warning (275080): Converted elements in bus name "c_in" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "c_in[27]" to "c_in27"
+    Warning (275081): Converted element name(s) from "c_in[26]" to "c_in26"
+    Warning (275081): Converted element name(s) from "c_in[25]" to "c_in25"
+    Warning (275081): Converted element name(s) from "c_in[24]" to "c_in24"
+    Warning (275081): Converted element name(s) from "c_in[23]" to "c_in23"
+    Warning (275081): Converted element name(s) from "c_in[22]" to "c_in22"
+    Warning (275081): Converted element name(s) from "c_in[21]" to "c_in21"
+    Warning (275081): Converted element name(s) from "c_in[20]" to "c_in20"
+    Warning (275081): Converted element name(s) from "c_in[19]" to "c_in19"
+    Warning (275081): Converted element name(s) from "c_in[18]" to "c_in18"
+    Warning (275081): Converted element name(s) from "c_in[17]" to "c_in17"
+    Warning (275081): Converted element name(s) from "c_in[16]" to "c_in16"
+    Warning (275081): Converted element name(s) from "c_in[15]" to "c_in15"
+    Warning (275081): Converted element name(s) from "c_in[14]" to "c_in14"
+    Warning (275081): Converted element name(s) from "c_in[13]" to "c_in13"
+    Warning (275081): Converted element name(s) from "c_in[12]" to "c_in12"
+    Warning (275081): Converted element name(s) from "c_in[11]" to "c_in11"
+    Warning (275081): Converted element name(s) from "c_in[10]" to "c_in10"
+    Warning (275081): Converted element name(s) from "c_in[9]" to "c_in9"
+    Warning (275081): Converted element name(s) from "c_in[8]" to "c_in8"
+    Warning (275081): Converted element name(s) from "c_in[7]" to "c_in7"
+    Warning (275081): Converted element name(s) from "c_in[6]" to "c_in6"
+    Warning (275081): Converted element name(s) from "c_in[5]" to "c_in5"
+    Warning (275081): Converted element name(s) from "c_in[4]" to "c_in4"
+    Warning (275081): Converted element name(s) from "c_in[3]" to "c_in3"
+    Warning (275081): Converted element name(s) from "c_in[2]" to "c_in2"
+    Warning (275081): Converted element name(s) from "c_in[1]" to "c_in1"
+    Warning (275081): Converted element name(s) from "c_in[0]" to "c_in0"
+    Warning (275081): Converted element name(s) from "c_in[27..0]" to "c_in27..0"
+Warning (275080): Converted elements in bus name "d_in" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "d_in[27]" to "d_in27"
+    Warning (275081): Converted element name(s) from "d_in[26]" to "d_in26"
+    Warning (275081): Converted element name(s) from "d_in[25]" to "d_in25"
+    Warning (275081): Converted element name(s) from "d_in[24]" to "d_in24"
+    Warning (275081): Converted element name(s) from "d_in[23]" to "d_in23"
+    Warning (275081): Converted element name(s) from "d_in[22]" to "d_in22"
+    Warning (275081): Converted element name(s) from "d_in[21]" to "d_in21"
+    Warning (275081): Converted element name(s) from "d_in[20]" to "d_in20"
+    Warning (275081): Converted element name(s) from "d_in[19]" to "d_in19"
+    Warning (275081): Converted element name(s) from "d_in[18]" to "d_in18"
+    Warning (275081): Converted element name(s) from "d_in[17]" to "d_in17"
+    Warning (275081): Converted element name(s) from "d_in[16]" to "d_in16"
+    Warning (275081): Converted element name(s) from "d_in[15]" to "d_in15"
+    Warning (275081): Converted element name(s) from "d_in[14]" to "d_in14"
+    Warning (275081): Converted element name(s) from "d_in[13]" to "d_in13"
+    Warning (275081): Converted element name(s) from "d_in[12]" to "d_in12"
+    Warning (275081): Converted element name(s) from "d_in[11]" to "d_in11"
+    Warning (275081): Converted element name(s) from "d_in[10]" to "d_in10"
+    Warning (275081): Converted element name(s) from "d_in[9]" to "d_in9"
+    Warning (275081): Converted element name(s) from "d_in[8]" to "d_in8"
+    Warning (275081): Converted element name(s) from "d_in[7]" to "d_in7"
+    Warning (275081): Converted element name(s) from "d_in[6]" to "d_in6"
+    Warning (275081): Converted element name(s) from "d_in[5]" to "d_in5"
+    Warning (275081): Converted element name(s) from "d_in[4]" to "d_in4"
+    Warning (275081): Converted element name(s) from "d_in[3]" to "d_in3"
+    Warning (275081): Converted element name(s) from "d_in[2]" to "d_in2"
+    Warning (275081): Converted element name(s) from "d_in[1]" to "d_in1"
+    Warning (275081): Converted element name(s) from "d_in[0]" to "d_in0"
+    Warning (275081): Converted element name(s) from "d_in[27..0]" to "d_in27..0"
+Info (12128): Elaborating entity "PC_1" for hierarchy "desencrypt:inst55|key_generator:inst1|PC_1:inst999"
+Warning (275009): Pin "pin8" not connected
+Warning (275009): Pin "pin16" not connected
+Warning (275009): Pin "pin24" not connected
+Warning (275009): Pin "pin32" not connected
+Warning (275009): Pin "pin40" not connected
+Warning (275009): Pin "pin48" not connected
+Warning (275009): Pin "pin56" not connected
+Warning (275009): Pin "pin64" not connected
+Info (21057): Implemented 184 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 22 output pins
+    Info (21061): Implemented 148 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 145 warnings
+    Info: Peak virtual memory: 4865 megabytes
+    Info: Processing ended: Thu Nov 25 22:54:53 2021
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:18
+
+

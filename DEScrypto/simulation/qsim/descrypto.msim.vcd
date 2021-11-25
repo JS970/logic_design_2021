@@ -1,0 +1,738 @@
+$comment
+	File created using the following command:
+		vcd file descrypto.msim.vcd -direction
+$end
+$date
+	Wed Nov 24 21:14:22 2021
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module s_box_7_vlg_vec_tst $end
+$var reg 1 ! clk $end
+$var reg 1 " rst_n $end
+$var reg 6 # sbox1_in [5:0] $end
+$var wire 1 $ sbox1_out [3] $end
+$var wire 1 % sbox1_out [2] $end
+$var wire 1 & sbox1_out [1] $end
+$var wire 1 ' sbox1_out [0] $end
+
+$scope module i1 $end
+$var wire 1 ( gnd $end
+$var wire 1 ) vcc $end
+$var wire 1 * unknown $end
+$var tri1 1 + devclrn $end
+$var tri1 1 , devpor $end
+$var tri1 1 - devoe $end
+$var wire 1 . inst31|inst~8_combout $end
+$var wire 1 / inst31|inst~7_combout $end
+$var wire 1 0 inst31|inst~6_combout $end
+$var wire 1 1 inst31|inst~4_combout $end
+$var wire 1 2 inst31|inst~5_combout $end
+$var wire 1 3 inst31|inst~3_combout $end
+$var wire 1 4 clk~combout $end
+$var wire 1 5 rst_n~combout $end
+$var wire 1 6 inst2|inst7~regout $end
+$var wire 1 7 inst31|inst~11_combout $end
+$var wire 1 8 inst32|inst4~4_combout $end
+$var wire 1 9 inst32|inst4~3_combout $end
+$var wire 1 : inst32|inst4~8_combout $end
+$var wire 1 ; inst32|inst4~7_combout $end
+$var wire 1 < inst32|inst4~6_combout $end
+$var wire 1 = inst32|inst4~11_combout $end
+$var wire 1 > inst32|inst5~8_combout $end
+$var wire 1 ? inst32|inst5~7_combout $end
+$var wire 1 @ inst32|inst5~6_combout $end
+$var wire 1 A inst32|inst5~4_combout $end
+$var wire 1 B inst32|inst5~5_combout $end
+$var wire 1 C inst32|inst5~3_combout $end
+$var wire 1 D inst32|inst5~11_combout $end
+$var wire 1 E inst32|inst6~8_combout $end
+$var wire 1 F inst32|inst6~7_combout $end
+$var wire 1 G inst32|inst6~6_combout $end
+$var wire 1 H inst32|inst6~4_combout $end
+$var wire 1 I inst32|inst6~5_combout $end
+$var wire 1 J inst32|inst6~3_combout $end
+$var wire 1 K inst32|inst6~11_combout $end
+$var wire 1 L sbox1_in~combout [5] $end
+$var wire 1 M sbox1_in~combout [4] $end
+$var wire 1 N sbox1_in~combout [3] $end
+$var wire 1 O sbox1_in~combout [2] $end
+$var wire 1 P sbox1_in~combout [1] $end
+$var wire 1 Q sbox1_in~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+b0 #
+0'
+0&
+0%
+0$
+0(
+1)
+x*
+1+
+1,
+1-
+1.
+0/
+00
+01
+02
+03
+04
+15
+06
+07
+18
+19
+0:
+0;
+0<
+0=
+1>
+0?
+0@
+0A
+1B
+0C
+0D
+0E
+1F
+1G
+0H
+1I
+0J
+0K
+0Q
+0P
+0O
+0N
+0M
+0L
+$end
+#10000
+1!
+14
+16
+1=
+1%
+#20000
+0!
+04
+#30000
+b100000 #
+b100100 #
+b100110 #
+b100111 #
+1!
+1Q
+1P
+1O
+1L
+14
+0I
+1H
+0F
+1E
+0B
+1A
+1;
+1:
+12
+1/
+1J
+0G
+09
+10
+0J
+1G
+1C
+1<
+13
+1K
+0=
+0K
+17
+1'
+0%
+0'
+1$
+#40000
+0!
+04
+#50000
+1!
+14
+#60000
+0!
+04
+#70000
+1!
+14
+#80000
+0!
+04
+#90000
+1!
+14
+#100000
+0!
+04
+#110000
+1!
+14
+#120000
+0!
+04
+#130000
+b101111 #
+b101011 #
+b101001 #
+b101000 #
+1!
+0Q
+0P
+0O
+1N
+14
+1F
+0E
+0>
+0:
+11
+0/
+0.
+0G
+0<
+19
+00
+1=
+1%
+#140000
+0!
+04
+#150000
+1!
+14
+#160000
+0!
+04
+#170000
+1!
+14
+#180000
+0!
+04
+#190000
+b101001 #
+1!
+1Q
+14
+1I
+0H
+0F
+1B
+0A
+1>
+0;
+1:
+02
+01
+1.
+1J
+0C
+1<
+03
+09
+10
+1K
+0=
+07
+1'
+0%
+0$
+#200000
+0!
+04
+#210000
+1!
+14
+#220000
+0!
+04
+#230000
+1!
+14
+#240000
+0!
+04
+#250000
+b101011 #
+b101010 #
+1!
+0Q
+1P
+14
+1E
+1?
+0>
+08
+1/
+0.
+1G
+1@
+00
+1D
+1&
+#260000
+0!
+04
+#270000
+1!
+14
+#280000
+0!
+04
+#290000
+1!
+14
+#300000
+b101011 #
+0!
+1Q
+04
+0I
+1H
+1F
+0E
+0?
+1>
+1;
+0:
+11
+0J
+0G
+0@
+0<
+19
+0K
+0D
+1=
+0'
+0&
+1%
+#310000
+1!
+14
+#320000
+0!
+04
+#330000
+1!
+14
+#340000
+0!
+04
+#350000
+1!
+14
+#360000
+b101111 #
+b101101 #
+b101100 #
+0!
+0Q
+0P
+1O
+04
+1I
+0H
+0F
+1E
+1?
+0>
+0/
+1.
+1J
+1G
+1@
+10
+1K
+1D
+1'
+1&
+#370000
+1!
+14
+#380000
+0!
+04
+#390000
+1!
+14
+#400000
+0!
+04
+#410000
+1!
+14
+#420000
+b101101 #
+0!
+1Q
+04
+0I
+1H
+0B
+1>
+0;
+12
+01
+1/
+0.
+0J
+13
+09
+00
+0K
+17
+0=
+0'
+1$
+0%
+#430000
+1!
+14
+#440000
+0!
+04
+#450000
+1!
+14
+#460000
+0!
+04
+#470000
+1!
+14
+#480000
+0!
+04
+#490000
+1!
+14
+#500000
+b101111 #
+b101110 #
+0!
+0Q
+1P
+04
+1F
+0E
+18
+11
+0/
+0G
+19
+1=
+1%
+#510000
+1!
+14
+#520000
+0!
+04
+#530000
+1!
+14
+#540000
+0!
+04
+#550000
+1!
+14
+#560000
+0!
+04
+#570000
+b101111 #
+1!
+1Q
+14
+1I
+0H
+0F
+1B
+1A
+0>
+1;
+1:
+08
+02
+1.
+1J
+1C
+1<
+03
+10
+1K
+07
+1'
+0$
+#580000
+0!
+04
+#590000
+1!
+14
+#600000
+0!
+04
+#610000
+1!
+14
+#620000
+0!
+04
+#630000
+1!
+14
+#640000
+b111111 #
+b110111 #
+b110011 #
+b110001 #
+b110000 #
+0!
+0Q
+0P
+0O
+0N
+1M
+04
+1F
+0A
+0?
+1>
+0;
+0:
+18
+01
+0K
+0@
+17
+1@
+0<
+09
+0D
+0'
+1$
+1D
+0=
+0&
+1&
+0%
+#650000
+1!
+14
+#660000
+0!
+04
+#670000
+1!
+14
+#680000
+0!
+04
+#690000
+1!
+14
+#700000
+0!
+04
+#710000
+1!
+14
+#720000
+0!
+04
+#730000
+b110001 #
+1!
+1Q
+14
+0I
+1H
+0F
+1E
+1?
+0>
+1;
+11
+1/
+0J
+1G
+0@
+19
+1K
+0D
+1'
+0&
+#740000
+0!
+04
+#750000
+1!
+14
+#760000
+0!
+04
+#770000
+1!
+14
+#780000
+0!
+04
+#790000
+1!
+14
+#800000
+0!
+04
+#810000
+b110011 #
+b110010 #
+1!
+0Q
+1P
+14
+0B
+1A
+0?
+1>
+1:
+08
+0C
+1@
+1<
+1D
+1=
+1&
+1%
+#820000
+0!
+04
+#830000
+1!
+14
+#840000
+0!
+04
+#850000
+1!
+14
+#860000
+0!
+04
+#870000
+1!
+14
+#880000
+0!
+04
+#890000
+b10010 #
+b10 #
+b0 #
+1!
+0P
+0M
+0L
+14
+1I
+0H
+1F
+0E
+1B
+0A
+0;
+0:
+18
+01
+0/
+0K
+1C
+0@
+07
+1J
+0G
+0D
+09
+13
+0J
+1G
+0C
+0<
+19
+03
+00
+1D
+1K
+0=
+17
+0'
+0$
+0&
+0K
+0D
+1=
+07
+1&
+1'
+0%
+1$
+0'
+0&
+1%
+0$
+#900000
+0!
+04
+#910000
+1!
+14
+#920000
+0!
+04
+#930000
+1!
+14
+#940000
+0!
+04
+#950000
+1!
+14
+#960000
+0!
+04
+#970000
+1!
+14
+#980000
+0!
+04
+#990000
+1!
+14
+#1000000
